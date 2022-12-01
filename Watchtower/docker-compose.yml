@@ -13,7 +13,7 @@ services:
       - WATCHTOWER_NOTIFICATION_EMAIL_SERVER_PASSWORD=<password>
       - WATCHTOWER_NOTIFICATION_EMAIL_DELAY=2
       - WATCHTOWER_NOTIFICATIONS_HOSTNAME=<NAME-OF-SERVER>
-      - WATCHTOWER_SCHEDULE=0 0 0 */1 * *
+      - WATCHTOWER_SCHEDULE=0 0 0 */1 * * #This will check for updates daily 
       - TZ=Africa/Johannesburg
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
