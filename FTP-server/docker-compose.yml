@@ -1,0 +1,13 @@
+version: '3.9'
+services:
+    alpine-ftp-server:
+        image: delfer/alpine-ftp-server
+        environment:
+            - ADDRESS=192.168.0.10
+            - USERS="wicigee|password|/ftp|1000 hikvision|Johan1234|/ftp/hikvission|1001"
+        ports:
+            - '21000-21010:21000-21010'
+            - '21:21'
+        volumes:
+            - /home/wicigee/ftp:/ftp
+        restart: unless-stopped
